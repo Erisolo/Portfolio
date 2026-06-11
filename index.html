@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<title> references </title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<style>
+
+body {
+  background-image: url('pink.jpg');
+  backgroud-repeat: repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  font-family: 'Alegreya SC';
+  text-align: center
+}
+
+header {
+  font-size: 80px;
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+.column {
+  float: left;
+  height: 300px;
+}
+
+.fill {
+  width: 5%;
+}
+
+.middle {
+  width: 30%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  margin: 50px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<b style= "color: hotpink;"> Portraits </b>
+</header>
+
+ <div class="row">
+  <div class="column fill"> </div>
+  <div class="column middle"> <a href= "1.jpg"> <img src="1.jpg" height="300"> </a> </div>
+  <div class="column middle"> <a href= "2.jpg"> <img src="2.jpg" height="300"> </a> </div>
+  <div class="column middle"> <a href= "3.jpg"> <img src="3.jpg" height="300"> </a></div>
+  <div class="column fill"></div>
+</div> 
+
+ <div class="row">
+  <div class="column fill"> </div>
+  <div class="column middle"> <a href= "4.jpg"> <img src="4.jpg" height="300"> </a> </div>
+  <div class="column middle"> <a href= "5.jpg"> <img src="5.jpg" height="300"> </a> </div>
+  <div class="column middle"> <a href= "6.jpg"> <img src="6.jpg" height="300"> </a></div>
+  <div class="column fill"></div>
+</div> 
+
+ <div class="row">
+  <div class="column fill"> </div>
+  <div class="column middle"> <a href= "7.jpg"> <img src="7.jpg" height="300"> </a> </div>
+  <div class="column middle"> <a href= "8.jpg"> <img src="8.jpg" height="300"> </a> </div>
+  <div class="column middle"> <a href= "9.jpg"> <img src="9.jpg" height="300"> </a></div>
+  <div class="column fill"></div>
+</div> 
+
+</body>
+</html>
