@@ -1,0 +1,43 @@
+body {
+  background-color: GreenYellow;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  font-family: 'Alegreya SC';
+  text-align: center;
+  margin-top: 0em;
+  padding-top: 0px;
+}
+
+.header {
+  font-size: 300%;
+  font-family: 'Climate Crisis';
+  color: hotpink;
+  background: GreenYellow;
+  text-align: left;
+
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-left: 0.5em;
+
+  position: sticky;
+  top: 0;
+}
+.column {
+  float: left;
+  height: 300px;
+}
+
+.fill {
+  width: 5%;
+}
+
+.middle {
+  width: 30%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  margin: 50px;
+}
