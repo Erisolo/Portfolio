@@ -8,36 +8,60 @@ body {
   padding-top: 0px;
 }
 
+.header h1 {
+    font-size: 7vw !important;
+    line-height: 1;
+    margin: 0 !important;
+}
 .header {
-  font-size: 300%;
+  display: flex;
+  align-items: flex-end; /* This forces everything to align at the bottom */
+  gap: 40px;
   font-family: 'Climate Crisis';
   color: hotpink;
   background: GreenYellow;
   text-align: left;
-
-  padding-top: 0px;
+  padding-top: 10px;
   margin-top: 0px;
   padding-left: 0.5em;
-
   position: sticky;
   top: 0;
-}
-.column {
-  float: left;
-  height: 300px;
+  z-index: 10;
 }
 
-.fill {
-  width: 5%;
+.nav-links {
+  display: flex;            /* Forces the <p> tags to sit side-by-side */
+  gap: 20px;                /* Adds space between Portfolio, Games, and Resumé */
+  margin: 0 !important;
 }
 
-.middle {
-  width: 30%;
+.nav-links p {
+  margin: 0;                /* Removes browser default spacing */
+  cursor: pointer;          /* Makes it feel like a clickable menu */
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-  margin: 50px;
+
+
+/* --- Banner Content Colors & Fonts --- */
+.banner_content {
+  background-color: GreenYellow;
+  color: PaleVioletRed !important;
+  font-family: "Changa One", sans-serif !important;
+  text-align: left;
+}
+
+.banner_content h1 {
+  font-size: 70px;
+  line-height: 60px;
+  color: PaleVioletRed;
+}
+
+
+button {
+  border-radius: 0;
+  background: transparent;
+  border: 2px solid PaleVioletRed;
+  color: PaleVioletRed;
+  padding: 10px 20px;
+  cursor: pointer;
 }
