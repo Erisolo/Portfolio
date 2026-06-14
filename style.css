@@ -2,16 +2,24 @@ body {
   background-color: GreenYellow;
   background-attachment: fixed;
   background-size: 100% 100%;
-  font-family: 'Alegreya SC';
+  font-family: 'Changa One';
   text-align: center;
   margin-top: 0em;
   padding-top: 0px;
 }
 
-.header h1 {
+.header h1, a {
     font-size: 7vw !important;
     line-height: 1;
     margin: 0 !important;
+    color: hotpink !important;
+    text-decoration-line: none !important;
+    cursor: pointer; 
+    transition: transform 0.4s, color 0s; 
+}
+.header h1:hover {
+    transform: scale(1.08); 
+     
 }
 .header {
   display: flex;
@@ -36,10 +44,27 @@ body {
 }
 
 .nav-links p {
-  margin: 0;                /* Removes browser default spacing */
-  cursor: pointer;          /* Makes it feel like a clickable menu */
+  margin: 0;                
+  cursor: pointer;  
+  transition: transform 0.4s, color 0s;        
 }
 
+.nav-links p:hover {
+  color: LimeGreen;  
+  transform: scale(1.05);      
+}
+
+ 
+.gif-hover
+{
+    transition: transform 0.9s, rotate 0.9s; 
+
+}
+.gif-hover:hover{
+   transform: scale(1.10); 
+    rotate: 5deg;
+
+}
 
 
 /* --- Banner Content Colors & Fonts --- */
@@ -58,10 +83,77 @@ body {
 
 
 button {
-  border-radius: 0;
+  border-radius: 10px;
   background: transparent;
   border: 2px solid PaleVioletRed;
   color: PaleVioletRed;
-  padding: 10px 20px;
+  padding: 7px 10px;
   cursor: pointer;
+  transition: transform 0.4s, color 0s;
+}
+
+button:hover
+{
+    background: LimeGreen;
+    border: 2px solid LimeGreen;
+    color: greenyellow;
+    transform: scale(1.02);
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    /* Switches from side-by-side to stacked vertically */
+    flex-direction: column; 
+    align-items: flex-start; /* Aligns everything neatly to the left */
+    gap: 10px;               /* Shrinks the gap between title and links */
+    padding: 10px 15px;
+  }
+
+  .header h1 {
+    /* Shrinks 'Erï' so your long surname doesn't cut off on mobile */
+    font-size: 45px !important; 
+    line-height: 1;
+  }
+
+  .nav-links {
+    flex-wrap: wrap; 
+    gap: 15px;
+  }
+
+  .nav-links p {
+    /* Links will also scale down slightly on smaller screens */
+    font-size: 3.5vw; 
+  }
+}
+
+@media (max-width: 991px) {
+  .home_banner_area .banner_inner .banner_content h1 {
+    font-size: 45px !important; /* Shrinks the text down so it doesn't spill out */
+    line-height: 45px;
+    margin-bottom: 15px;
+  }
+}
+
+/* --- Fixes the Banner Name for Phones (Ultra Responsive) --- */
+@media (max-width: 576px) {
+  .home_banner_area .banner_inner .banner_content h1 {
+    /* Uses viewport width (vw) so the letters shrink automatically with the phone screen */
+    font-size: 10vw !important; 
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+  
+  .home_banner_area .banner_inner .banner_content h3 {
+    font-size: 28px;
+  }
+
+  .home_banner_area .banner_inner .banner_content h5 {
+    font-size: 18px;
+  }
+
+  button {
+  padding: 2px 5px;
+  font-size: 10px;
+}
 }
