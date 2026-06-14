@@ -28,7 +28,7 @@ body {
 }
 .header {
   display: flex;
-  align-items: flex-end; /* This forces everything to align at the bottom */
+  align-items: flex-end;
   gap: 40px;
   font-family: 'Climate Crisis';
   color: hotpink;
@@ -48,14 +48,14 @@ body {
   margin: 0 !important;
 }
 
-.nav-links p, a {
+.nav-links p, .nav-links a {
   margin: 0;                
   cursor: pointer;  
   transition: transform 0.4s, color 0s;        
 }
 
-.nav-links p:hover, a:hover {
-  color: LimeGreen;  
+.nav-links p:hover, .nav-links a:hover {
+  color: LimeGreen !important;  
   transform: scale(1.05);      
 }
 
@@ -64,6 +64,19 @@ body {
     position: absolute; 
     top: 10px; 
     right: 10px;
+}
+
+.header img:hover{
+  animation: spin 1s ease;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .dropdown {
@@ -151,6 +164,66 @@ button:hover
     transform: scale(1.02);
 }
 
+.page-title{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center; 
+    font-size: 5vw;
+    color: palevioletred;
+}
+
+.round-container{
+  border-radius: 25px;
+  width: 90%;
+  transition: transform 0.4s, rotate 0.4s;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.round-container:hover{
+  transform: scale(1.05); 
+}
+
+.round-container h1{
+  font-size: 3vw;
+}
+.round-container p{
+  font-size: 2vw;
+}
+
+
+#paterm{
+    padding-top: 10px;
+    background-color: black;
+    color: green;
+    font-family: extrablur;
+}
+#paterm p{
+    font-family: "VT323", monospace;
+    
+}
+
+#potochop{
+    background-color: #2437af;
+    color: white;
+    font-family: "VT323", monospace;
+}
+
+#ME{
+    font-family: "VT323", monospace;
+    background-color: #222034; /**/
+    color: white;
+}
+
+#paterm:hover, #ME:hover{
+    rotate: -2deg;
+}
+
+#potochop:hover{
+    rotate: 2deg;
+}
+
+
 
 @media (max-width: 768px) {
   .header {
@@ -211,4 +284,31 @@ button:hover
 .header img{
     height: 7vw; 
  }
+
+ .page-title{
+    font-size: 7vw;
 }
+
+.round-container p{
+  font-size: 3vw;
+}
+
+.round-container h1{
+  font-size: 4vw;
+}
+}
+
+
+/* FONTS*/
+
+@font-face {
+  font-family: extrablur; /* set name */
+  src: url(fonts/ExtraBlur.ttf); /* url of the font */
+}
+
+.vt323-regular {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
