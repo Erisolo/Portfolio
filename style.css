@@ -8,15 +8,20 @@ body {
   padding-top: 0px;
 }
 
-.header h1, a {
+.header h1 {
     font-size: 7vw !important;
     line-height: 1;
     margin: 0 !important;
-    color: hotpink !important;
-    text-decoration-line: none !important;
     cursor: pointer; 
     transition: transform 0.4s, color 0s; 
 }
+
+.header a {
+    color: hotpink !important;
+    text-decoration-line: none !important;
+    cursor: pointer; 
+}
+
 .header h1:hover {
     transform: scale(1.08); 
      
@@ -38,21 +43,67 @@ body {
 }
 
 .nav-links {
-  display: flex;            /* Forces the <p> tags to sit side-by-side */
-  gap: 20px;                /* Adds space between Portfolio, Games, and Resumé */
+  display: flex;            
+  gap: 20px;                
   margin: 0 !important;
 }
 
-.nav-links p {
+.nav-links p, a {
   margin: 0;                
   cursor: pointer;  
   transition: transform 0.4s, color 0s;        
 }
 
-.nav-links p:hover {
+.nav-links p:hover, a:hover {
   color: LimeGreen;  
   transform: scale(1.05);      
 }
+
+.header img{
+    height: 4vw; 
+    position: absolute; 
+    top: 10px; 
+    right: 10px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 12px 16px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #adff2f73;
+}
+
+
 
  
 .gif-hover
@@ -155,5 +206,9 @@ button:hover
   button {
   padding: 2px 5px;
   font-size: 10px;
-}
+  }
+
+.header img{
+    height: 7vw; 
+ }
 }
