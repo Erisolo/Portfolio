@@ -10,17 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
   img.addEventListener('mouseleave', () => {
     img.src = img.dataset.static;
   });
-});
 
-document.querySelectorAll('.dropdown').forEach(dropdown => {
-  dropdown.addEventListener('click', function(e) {
-    e.stopPropagation();
-    this.classList.toggle('open');
+  img.addEventListener('touchstart', () => {
+    img.src = img.dataset.gif + '?t=' + new Date().getTime();
+    setTimeout(() => {
+      img.src = img.dataset.static;
+    }, 1400);
   });
-});
 
-document.addEventListener('click', () => {
-  document.querySelectorAll('.dropdown').forEach(dropdown => {
-    dropdown.classList.remove('open');
-  });
 });

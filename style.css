@@ -55,8 +55,17 @@ body {
 }
 
 .nav-links p:hover, .nav-links a:hover {
-  color: LimeGreen !important;  
-  transform: scale(1.05);      
+  /*color: palevioletred !important;*/
+  transform: scale(1.07);      
+}
+
+a {
+    color: green;
+    transition: transform 0.4s;
+}
+
+a:hover{
+    transform: scale(1.05); 
 }
 
 .header img{
@@ -64,6 +73,7 @@ body {
     position: absolute; 
     top: 10px; 
     right: 10px;
+    transition: transform 0.4s,
 }
 
 .header img:hover{
@@ -146,27 +156,28 @@ body {
 }
 
 
-button {
+.button {
+  display: inline-block;
   border-radius: 10px;
   background: transparent;
   border: 2px solid PaleVioletRed;
+  text-decoration: none;
   color: PaleVioletRed;
   padding: 7px 10px;
   cursor: pointer;
-  transition: transform 0.4s, color 0s;
+  transition: transform 0.4s, background-color 0s;
 }
 
-button:hover
+.button:hover
 {
-    background: LimeGreen;
-    border: 2px solid LimeGreen;
+    background: hotpink;
+    border: 2px solid hotpink;
     color: greenyellow;
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
 .page-title{
     margin-top: 1em;
-    margin-bottom: 1em;
     text-align: center; 
     font-size: 5vw;
     color: palevioletred;
@@ -175,7 +186,7 @@ button:hover
 .round-container{
   border-radius: 25px;
   width: 90%;
-  transition: transform 0.4s, rotate 0.4s;
+  transition: transform 0.4s, rotate 0.4s, box-shadow 0.4s;
   margin-top: 2em;
   margin-bottom: 2em;
 }
@@ -217,10 +228,12 @@ button:hover
 
 #paterm:hover, #ME:hover{
     rotate: -2deg;
+    /*box-shadow: -5px 10px 3px limegreen;*/
 }
 
 #potochop:hover{
     rotate: 2deg;
+    /*box-shadow: 5px 10px 3px limegreen;*/
 }
 
 
