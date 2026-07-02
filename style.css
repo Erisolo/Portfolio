@@ -186,14 +186,17 @@ a:hover{
 .round-container{
   border-radius: 25px;
   width: 90%;
-  transition: transform 0.4s, rotate 0.4s, box-shadow 0.4s;
+  transition: transform 0.4s, rotate 0.4s, background-color 0.4s;
   margin-top: 2em;
   margin-bottom: 2em;
-  background-color: gray;
+  background-color: palevioletred;
+  min-height:45vh !important;
+  background-position: center;
 }
 
-.round-container.active{
+.round-container:hover{
   transform: scale(1.05); 
+  background-color: pink;
 }
 
 .round-container h1{
@@ -205,6 +208,7 @@ a:hover{
 }
 .round-container {
   font-size: 1.5vw;
+  color: white;
 }
 
 .img-wrap {
@@ -360,44 +364,56 @@ a:hover{
 }
 
 
-@view-transition{
-  navigation: auto;
-}
 
-::view-transition-group(root)
+
+@media(prefers-reduced-motion: no-preference)
 {
-  animation-duration: 1s;
-  animation-timing-function: ease;
+    @view-transition{
+    navigation: auto;
+  }
+
+
+  ::view-transition-old(root)
+  {
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-name: fade-out;
+
+  }
+  ::view-transition-new(root)
+  {
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-name: slide-in;
+  }
+
+  .header{
+    view-transition-name: header-trans;
+  }
+
+  @keyframes fade-out {
+    from {
+        translate: 0;
+      }
+      to {
+        translate: 0 100vh;
+      }
+  }
+
+  @keyframes slide-in {
+    from {
+      /*opacity: 0;*/
+          translate: 0 100vh;
+            }
+      to {
+        /*opacity: 1;*/
+          translate: 0;
+      }
+    
+  }
+
 }
 
-::view-transition-old(page-content)
-{
-  animation-name: fade-out;
 
-}
-::view-transition-new(page-content)
-{
-  animation-name: slide-in;
-}
 
-.page-content{
-  view-transition-name: page-content;
-}
-
-@keyframes fade-out {
-  from { opacity: 1; }
-    to { opacity: 0; }
-}
-
-@keyframes slide-in {
-  from {
-    opacity: 0;
-        transform: translateY(10vw);
-    }
-    to {
-      opacity: 1;
-        transform: translateY(0);
-    }
-  
-}
 
